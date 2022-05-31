@@ -10,15 +10,15 @@ import java.util.List;
 @Service
 public class DatosdogService {
     @Autowired
-    private DogRepository dogRepository;
+    private static DogRepository dogRepository;
 
-    public Datosdog insertar (Datosdog datosdog){
+    public static Datosdog insertar(Datosdog datosdog){
         return dogRepository.save(datosdog);
     }
-    public Datosdog actualizar (Datosdog datosdog){
+    public static Datosdog actualizar(Datosdog datosdog){
         return dogRepository.save(datosdog);
     }
-    public List<Datosdog> listar(){
+    public static List<Datosdog> listar(){
         return  dogRepository.findAll();
     }
     public void eliminar(Datosdog datosdog){
